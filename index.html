@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INNOCENT TECH - Stylish Name Design</title>
+    <title>INNOCENT TECH - Ultimate Brand Showcase</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,37 +14,62 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: 
+                linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.9)),
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             color: white;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Matrix rain effect */
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.3;
         }
 
         .container {
             text-align: center;
             max-width: 1200px;
             width: 100%;
+            z-index: 1;
+            position: relative;
         }
 
+        /* Header section with unique colors */
         .name-container {
             margin-bottom: 50px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .name-title {
-            font-size: 4rem;
+            font-size: 4.5rem;
             font-weight: 800;
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #e84393);
+            letter-spacing: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
             background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 8s ease infinite, glow 3s ease-in-out infinite alternate;
+            animation: gradientShift 10s ease infinite, glow 3s ease-in-out infinite alternate;
             text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
             position: relative;
             display: inline-block;
@@ -64,39 +89,48 @@
 
         @keyframes glow {
             from {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
-                             0 0 20px rgba(255, 255, 255, 0.1);
+                text-shadow: 0 0 10px rgba(255, 107, 107, 0.3),
+                             0 0 20px rgba(78, 205, 196, 0.2);
             }
             to {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
-                             0 0 30px rgba(52, 152, 219, 0.3),
-                             0 0 40px rgba(46, 204, 113, 0.2);
+                text-shadow: 0 0 20px rgba(255, 107, 107, 0.6),
+                             0 0 30px rgba(78, 205, 196, 0.4),
+                             0 0 40px rgba(69, 183, 209, 0.3);
             }
         }
 
         .name-subtitle {
             font-size: 1.5rem;
-            color: #cbd5e1;
+            color: #a5b4fc;
             margin-bottom: 30px;
             font-weight: 300;
             letter-spacing: 2px;
         }
 
         .tech-icon {
-            font-size: 2rem;
-            margin: 0 10px;
-            color: #D4AF37;
+            font-size: 2.2rem;
+            margin: 0 15px;
             animation: float 6s ease-in-out infinite;
         }
 
+        .tech-icon:nth-child(1) {
+            color: #ff6b6b;
+            animation-delay: 0s;
+        }
+
         .tech-icon:nth-child(2) {
+            color: #4ecdc4;
             animation-delay: 1s;
-            color: #10b981;
         }
 
         .tech-icon:nth-child(3) {
+            color: #feca57;
             animation-delay: 2s;
-            color: #e74c3c;
+        }
+
+        .tech-icon:nth-child(4) {
+            color: #ff9ff3;
+            animation-delay: 3s;
         }
 
         @keyframes float {
@@ -111,6 +145,7 @@
             }
         }
 
+        /* Name variations with unique colors */
         .name-variations {
             display: flex;
             flex-wrap: wrap;
@@ -120,11 +155,11 @@
         }
 
         .variation {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
             padding: 30px;
             width: 300px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s, box-shadow 0.3s;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -132,7 +167,7 @@
 
         .variation:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
         }
 
         .variation-title {
@@ -142,36 +177,36 @@
         }
 
         .variation-1 {
-            background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(46, 204, 113, 0.2));
-            border-top: 3px solid #3498db;
+            border-top: 5px solid #ff6b6b;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(0, 0, 0, 0.8));
         }
 
         .variation-1 .variation-title {
-            background: linear-gradient(90deg, #3498db, #2ecc71);
+            background: linear-gradient(90deg, #ff6b6b, #ff9f43);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .variation-2 {
-            background: linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(232, 67, 147, 0.2));
-            border-top: 3px solid #e74c3c;
+            border-top: 5px solid #4ecdc4;
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.2), rgba(0, 0, 0, 0.8));
         }
 
         .variation-2 .variation-title {
-            background: linear-gradient(90deg, #e74c3c, #e84393);
+            background: linear-gradient(90deg, #4ecdc4, #45b7d1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .variation-3 {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(16, 185, 129, 0.2));
-            border-top: 3px solid #D4AF37;
+            border-top: 5px solid #feca57;
+            background: linear-gradient(135deg, rgba(254, 202, 87, 0.2), rgba(0, 0, 0, 0.8));
         }
 
         .variation-3 .variation-title {
-            background: linear-gradient(90deg, #D4AF37, #10b981);
+            background: linear-gradient(90deg, #feca57, #ff9ff3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -183,18 +218,24 @@
             line-height: 1.6;
         }
 
+        /* Usage examples with unique colors */
         .usage-examples {
             margin-top: 60px;
             padding: 40px;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(150, 206, 180, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .usage-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 30px;
-            color: #D4AF37;
+            background: linear-gradient(90deg, #96ceb4, #54a0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-align: center;
         }
 
@@ -212,6 +253,7 @@
             width: 180px;
             text-align: center;
             transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .example:hover {
@@ -222,7 +264,26 @@
         .example-icon {
             font-size: 2.5rem;
             margin-bottom: 15px;
-            color: #10b981;
+        }
+
+        .example:nth-child(1) .example-icon {
+            color: #ff6b6b;
+        }
+
+        .example:nth-child(2) .example-icon {
+            color: #4ecdc4;
+        }
+
+        .example:nth-child(3) .example-icon {
+            color: #feca57;
+        }
+
+        .example:nth-child(4) .example-icon {
+            color: #ff9ff3;
+        }
+
+        .example:nth-child(5) .example-icon {
+            color: #54a0ff;
         }
 
         .example-text {
@@ -230,10 +291,95 @@
             font-weight: 600;
         }
 
+        .example:nth-child(1) .example-text {
+            color: #ff6b6b;
+        }
+
+        .example:nth-child(2) .example-text {
+            color: #4ecdc4;
+        }
+
+        .example:nth-child(3) .example-text {
+            color: #feca57;
+        }
+
+        .example:nth-child(4) .example-text {
+            color: #ff9ff3;
+        }
+
+        .example:nth-child(5) .example-text {
+            color: #54a0ff;
+        }
+
+        /* Music player */
+        .music-player {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 158, 243, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .music-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ff9ff3;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .control-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .play-btn {
+            background: linear-gradient(135deg, #ff9ff3, #54a0ff);
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .volume-slider {
+            width: 150px;
+        }
+
         .footer {
             margin-top: 50px;
             color: #94a3b8;
             font-size: 0.9rem;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
         }
 
         /* Responsive adjustments */
@@ -254,10 +400,23 @@
             .variation-title {
                 font-size: 2rem;
             }
+            
+            .examples {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .example {
+                width: 100%;
+                max-width: 250px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Matrix rain effect -->
+    <canvas class="matrix-rain" id="matrixCanvas"></canvas>
+
     <div class="container">
         <div class="name-container">
             <h1 class="name-title">INNOCENT TECH</h1>
@@ -266,23 +425,24 @@
                 <i class="fas fa-code tech-icon"></i>
                 <i class="fas fa-laptop-code tech-icon"></i>
                 <i class="fas fa-microchip tech-icon"></i>
+                <i class="fas fa-shield-alt tech-icon"></i>
             </div>
         </div>
 
         <div class="name-variations">
             <div class="variation variation-1">
                 <h2 class="variation-title">INNOCENT TECH</h2>
-                <p class="variation-desc">Modern gradient design with blue and green colors, perfect for tech branding.</p>
+                <p class="variation-desc">Modern gradient design with vibrant colors, perfect for tech branding.</p>
             </div>
             
             <div class="variation variation-2">
                 <h2 class="variation-title">INNOCENT TECH</h2>
-                <p class="variation-desc">Bold design with red and pink gradient, ideal for making a strong statement.</p>
+                <p class="variation-desc">Bold design with unique color combinations, ideal for making a strong statement.</p>
             </div>
             
             <div class="variation variation-3">
                 <h2 class="variation-title">INNOCENT TECH</h2>
-                <p class="variation-desc">Elegant gold and green combination, representing premium quality and innovation.</p>
+                <p class="variation-desc">Elegant color combination, representing premium quality and innovation.</p>
             </div>
         </div>
 
@@ -312,12 +472,101 @@
             </div>
         </div>
 
+        <div class="music-player">
+            <h3 class="music-title">Now Playing: Vybz Kartel - Enchanting</h3>
+            <div class="player-controls">
+                <button class="control-btn" id="prevBtn">
+                    <i class="fas fa-step-backward"></i>
+                </button>
+                <button class="control-btn play-btn" id="playBtn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="control-btn" id="nextBtn">
+                    <i class="fas fa-step-forward"></i>
+                </button>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+
         <div class="footer">
             <p>Stylish name design for INNOCENT TECH | Created with HTML, CSS & JavaScript</p>
         </div>
     </div>
 
+    <audio id="music" loop>
+        <!-- In a real implementation, you would link to the actual song file -->
+        <source src="https://example.com/vybz-kartel-enchanting.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
+        // Matrix rain effect
+        const canvas = document.getElementById('matrixCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$#@%&*";
+        const charArray = chars.split("");
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        
+        for(let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = "#0F0";
+            ctx.font = fontSize + "px monospace";
+            
+            for(let i = 0; i < drops.length; i++) {
+                const text = charArray[Math.floor(Math.random() * charArray.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                
+                if(drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 35);
+        
+        // Music player functionality
+        const music = document.getElementById('music');
+        const playBtn = document.getElementById('playBtn');
+        const volumeSlider = document.getElementById('volumeSlider');
+        let isPlaying = false;
+        
+        playBtn.addEventListener('click', function() {
+            if(isPlaying) {
+                music.pause();
+                playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            } else {
+                music.play().catch(e => {
+                    console.log("Audio play failed:", e);
+                    // In a real implementation, you would handle this properly
+                    alert("Music file not found. In a real implementation, this would play Vybz Kartel - Enchanting.");
+                });
+                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+        
+        volumeSlider.addEventListener('input', function() {
+            music.volume = volumeSlider.value / 100;
+        });
+        
         // Add some interactive effects
         document.querySelectorAll('.variation').forEach(variation => {
             variation.addEventListener('mouseenter', function() {
@@ -337,6 +586,12 @@
                 mainTitle.style.transform = 'scale(1)';
             }, 500);
         }, 3000);
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
     </script>
 </body>
 </html>
