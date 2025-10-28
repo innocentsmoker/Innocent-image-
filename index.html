@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNOCENT TECH - Stylish Name Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .name-container {
+            margin-bottom: 50px;
+        }
+
+        .name-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #e84393);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 8s ease infinite, glow 3s ease-in-out infinite alternate;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            position: relative;
+            display: inline-block;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.2),
+                             0 0 20px rgba(255, 255, 255, 0.1);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
+                             0 0 30px rgba(52, 152, 219, 0.3),
+                             0 0 40px rgba(46, 204, 113, 0.2);
+            }
+        }
+
+        .name-subtitle {
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .tech-icon {
+            font-size: 2rem;
+            margin: 0 10px;
+            color: #D4AF37;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .tech-icon:nth-child(2) {
+            animation-delay: 1s;
+            color: #10b981;
+        }
+
+        .tech-icon:nth-child(3) {
+            animation-delay: 2s;
+            color: #e74c3c;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-15px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        .name-variations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .variation {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .variation:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .variation-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .variation-1 {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.2), rgba(46, 204, 113, 0.2));
+            border-top: 3px solid #3498db;
+        }
+
+        .variation-1 .variation-title {
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .variation-2 {
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(232, 67, 147, 0.2));
+            border-top: 3px solid #e74c3c;
+        }
+
+        .variation-2 .variation-title {
+            background: linear-gradient(90deg, #e74c3c, #e84393);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .variation-3 {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(16, 185, 129, 0.2));
+            border-top: 3px solid #D4AF37;
+        }
+
+        .variation-3 .variation-title {
+            background: linear-gradient(90deg, #D4AF37, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .variation-desc {
+            color: #cbd5e1;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .usage-examples {
+            margin-top: 60px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .usage-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #D4AF37;
+            text-align: center;
+        }
+
+        .examples {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .example {
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            width: 180px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .example:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        .example-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #10b981;
+        }
+
+        .example-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer {
+            margin-top: 50px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .name-title {
+                font-size: 2.5rem;
+            }
+            
+            .name-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .variation {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .variation-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="name-container">
+            <h1 class="name-title">INNOCENT TECH</h1>
+            <p class="name-subtitle">Innovation • Integrity • Excellence</p>
+            <div class="tech-icons">
+                <i class="fas fa-code tech-icon"></i>
+                <i class="fas fa-laptop-code tech-icon"></i>
+                <i class="fas fa-microchip tech-icon"></i>
+            </div>
+        </div>
+
+        <div class="name-variations">
+            <div class="variation variation-1">
+                <h2 class="variation-title">INNOCENT TECH</h2>
+                <p class="variation-desc">Modern gradient design with blue and green colors, perfect for tech branding.</p>
+            </div>
+            
+            <div class="variation variation-2">
+                <h2 class="variation-title">INNOCENT TECH</h2>
+                <p class="variation-desc">Bold design with red and pink gradient, ideal for making a strong statement.</p>
+            </div>
+            
+            <div class="variation variation-3">
+                <h2 class="variation-title">INNOCENT TECH</h2>
+                <p class="variation-desc">Elegant gold and green combination, representing premium quality and innovation.</p>
+            </div>
+        </div>
+
+        <div class="usage-examples">
+            <h2 class="usage-title">Usage Examples</h2>
+            <div class="examples">
+                <div class="example">
+                    <i class="fas fa-globe example-icon"></i>
+                    <div class="example-text">Website</div>
+                </div>
+                <div class="example">
+                    <i class="fas fa-file-alt example-icon"></i>
+                    <div class="example-text">Documents</div>
+                </div>
+                <div class="example">
+                    <i class="fas fa-t-shirt example-icon"></i>
+                    <div class="example-text">Merchandise</div>
+                </div>
+                <div class="example">
+                    <i class="fas fa-id-card example-icon"></i>
+                    <div class="example-text">Business Cards</div>
+                </div>
+                <div class="example">
+                    <i class="fas fa-video example-icon"></i>
+                    <div class="example-text">Videos</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Stylish name design for INNOCENT TECH | Created with HTML, CSS & JavaScript</p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive effects
+        document.querySelectorAll('.variation').forEach(variation => {
+            variation.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            variation.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add a subtle animation to the main title
+        const mainTitle = document.querySelector('.name-title');
+        setInterval(() => {
+            mainTitle.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                mainTitle.style.transform = 'scale(1)';
+            }, 500);
+        }, 3000);
+    </script>
+</body>
+</html>
